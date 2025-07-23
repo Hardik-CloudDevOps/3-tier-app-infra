@@ -16,7 +16,7 @@ resource "aws_launch_template" "frontend" {
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.frontend-server-sg.id]
   key_name = "us-east-1" #chnage the key 
-  user_data = filebase64("${path.module}/frontend-lt.sh")
+  #user_data = filebase64("${path.module}/frontend-lt.sh")
   #default_version = 1
   update_default_version = true
   tag_specifications {
@@ -47,7 +47,7 @@ resource "aws_launch_template" "backend" {
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.backend-server-sg.id]
   key_name = "us-east-1" 
-  user_data = filebase64("${path.module}/backend-lt.sh")
+  #user_data = filebase64("${path.module}/backend-lt.sh")
   #default_version = 1
   update_default_version = true
   tag_specifications {
