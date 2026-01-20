@@ -25,7 +25,7 @@ variable "instance-type" {
 variable "key-name" {
     description = "keyname"
     type = string
-    default = "us-east-1"
+    default = "testdevprod"
   
 }
 variable "backupr-retention" {
